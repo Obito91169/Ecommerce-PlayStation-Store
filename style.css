@@ -1,0 +1,295 @@
+body, h1, h2, h3, p, table, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #f5f5f5, #dfe9f3); 
+    color: #222;
+    line-height: 1.6;
+    padding: 20px;
+    background-image: url("images/PS30TH_16x9_WALLPAPER.png");
+}
+
+#menu {
+    background: #003087;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#menu a:hover {
+    color: #00a8e1; 
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.Products {
+    display: block;
+    margin: 20px auto;
+    width: 40%;
+    height: auto;
+    border-radius: 15px;        
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    transform: rotate(-2deg);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.Products:hover {
+    transform: rotate(0deg) scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.7);
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.hover-box {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.hover-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+.product_image {
+    max-width: 200px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    margin-bottom: 10px;
+}
+
+.hover-box:hover .product_image {
+    transform: scale(1.05); 
+}
+
+.hover-box h3 {
+    font-size: 20px;
+    color: #003087; 
+    margin-bottom: 8px;
+}
+
+.hover-box p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.product-page {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.product-page h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #003087;
+}
+
+.product-page img {
+    display: block;
+    max-width: 300px;
+    margin: 15px auto;
+    border-radius: 10px;
+}
+
+.product-info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+.product-info-table th, .product-info-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.product-info-table th {
+    background: #003087;
+    color: white;
+    width: 40%;
+}
+
+.buy-button {
+    display: inline-block;
+    background: #003087;
+    color: white;
+    padding: 12px 25px;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+    margin-top: 20px;
+}
+
+.buy-button:hover {
+    background: #00a8e1;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .product-page img {
+        max-width: 90%;
+    }
+}
+
+.buy-button.disabled {
+    background: gray;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.out-of-stock {
+    color: red;
+    font-weight: bold;
+}
+
+.about-page {
+    max-width: 800px;
+    margin: 20px auto 40px auto;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    line-height: 1.8;
+}
+
+.about-page h2, .about-page h3 {
+    color: #003087;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.about-page p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.about-page ul {
+    margin: 15px 0 20px 20px;
+    color: #222;
+}
+
+.about-page li {
+    margin-bottom: 8px;
+}
+
+.about-info p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.about-info strong {
+    color: #003087;
+}
+.form {
+    max-width: 600px;
+    margin: 30px auto;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px 35px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+.form h3 {
+    font-size: 24px;
+    color: #003087;
+    margin-bottom: 10px;
+}
+
+.form p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form input:focus,
+.form textarea:focus {
+    border-color: #003087;
+    box-shadow: 0 0 8px rgba(0, 48, 135, 0.3);
+}
+
+.form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.form .button {
+    display: inline-block;
+    background: #003087;
+    color: white;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    border: none;
+}
+
+.form .button:hover {
+    background: #00a8e1;
+    transform: scale(1.05);
+}
